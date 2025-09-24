@@ -1,0 +1,10 @@
+# JetBrains IDEs (WebStorm)
+.idea/
+
+# macOS system files
+.DS_Store
+
+# User-specific files from the initial commit
+source/
+web/
+*.md
