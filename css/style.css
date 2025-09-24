@@ -1,0 +1,227 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+
+body {
+    font-family: "Noto Sans SC", sans-serif;
+    line-height: 1.6;
+    background-color: #909580;
+    /* <-- 修改：主色-战舰灰 */
+    color: #333;
+}
+
+.custom-cursor {
+    cursor: url('../source/cursor/福.jpg'), auto;
+}
+
+a {
+    color: #846a6a;
+    /* 默认链接颜色：稳重的玫瑰灰褐 */
+    text-decoration: none;
+    /* 我们在这里统一移除下划线 */
+}
+
+
+.container {
+    width: 800px;
+    margin: 0 auto;
+    /* 这一行负责水平居中 */
+
+    /* ----- 以下是新增的样式 ----- */
+
+    background-color: #ffffff;
+    /* 给盒子一个纯白色的背景，以和页面的浅灰色背景区分开 */
+
+    padding: 20px;
+    /* 在盒子内部，为内容与边框之间，增加20像素的“内边距” */
+
+    margin-bottom: 20px;
+    /* 在每个容器盒子的底部，增加20像素的“外边距”，让它们上下分开 */
+
+    border: 1px solid #ddd;
+    /* 添加一个1像素宽的、实线的、浅灰色的边框 */
+}
+
+header.container {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+/* 选中header里的nav里的ul */
+header nav ul {
+    display: flex;
+    /* 启动第二层Flexbox引擎！让<li>们并排站立 */
+    gap: 20px;
+    /* 设置弹性项目之间的间距为20像素 */
+    list-style: none;
+    /* 移除列表默认的“小黑点”项目符号 */
+    flex-wrap: wrap;
+}
+
+header nav a {
+    /* 继承全局 a 的颜色 */
+    font-weight: bold;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+header nav a:hover {
+    color: #333;
+    /* 悬停时用深色文字，保证在黄色背景上的可读性 */
+    background-color: #f3de2c;
+    /* 点缀色：柠檬黄 */
+}
+
+/* 针对当前页面的链接，给一个特殊的、不那么突出的样式 */
+header nav a.current-page {
+    color: #333;
+    font-weight: bold;
+}
+
+.two-column-layout {
+    display: flex;
+    gap: 40px;
+    /* 我们可以让两栏之间的间距更大一些 */
+}
+
+.two-column-layout>section {
+    flex: 1;
+}
+
+
+/* --- 页脚样式 --- */
+.footer-columns {
+    display: flex;
+    gap: 40px;
+    /* 设置两栏之间的间距 */
+    padding-bottom: 20px;
+    /* 在栏目和底部的版权声明之间留出空间 */
+    border-bottom: 1px solid #eee;
+    /* 添加一条浅灰色的分割线 */
+    align-items: flex-start;
+}
+
+.footer-column h4 {
+    margin-bottom: 10px;
+    /* 栏目标题和下方的列表之间留出一点空间 */
+}
+
+.footer-column ul {
+    list-style: none;
+    /* 移除页脚链接列表的“小黑点” */
+}
+
+.footer-column a {
+    color: #555;
+    /* 让页脚链接的颜色稍浅，不那么突出 */
+    text-decoration: none;
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+    /* 鼠标悬停时，添加下划线作为反馈 */
+}
+
+.footer-bottom {
+    text-align: center;
+    /* 让版权声明文本居中 */
+    padding-top: 20px;
+    /* 分割线上方留出空间 */
+    font-size: 0.9em;
+    /* 让版权文字稍小一些 */
+    color: #777;
+    /* 让版权文字颜色更浅 */
+}
+
+.three-column-layout {
+    display: flex;
+    gap: 20px;
+    /* 您可以调整这个值来改变栏间距 */
+}
+
+.three-column-layout>section {
+    flex: 1;
+}
+/* --- 组件：按钮 --- */
+.btn {
+    /* 从“布局”武器架，这是关键一步 */
+    display: inline-block;
+
+    /* 从“字体排版”武器架 */
+    font-weight: 700;
+    /* 或者 'bold' */
+    color: #ffffff;
+    text-align: center;
+
+    /* 从“颜色与背景”武器架 */
+    background-color: #007BFF;
+    /* 一个清晰、有活力的蓝色 */
+
+    /* 从“盒模型与间距”武器架 */
+    padding: 12px 24px;
+    /* 上下12px，左右24px的内边距，让按钮更饱满 */
+
+    /* 从“边框与装饰”武器架 */
+    border: none;
+    /* 移除链接可能的默认边框 */
+    border-radius: 5px;
+    /* 5px的圆角 */
+
+    /* 从“交互与动画”武器架 */
+    cursor: pointer;
+    /* 鼠标悬停时显示为“小手”图标 */
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    /* 鼠标悬停时，让按钮的背景色变得更深一些，提供反馈 */
+    background-color: #0056b3;
+}
+
+
+
+
+
+
+
+
+
+
+
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    /* 为所有标题应用我们加载的“粗体”字重 */
+    line-height: 1.2;
+    /* 标题的行高可以比正文更紧凑一些，显得更有力 */
+    margin-bottom: 10px;
+    /* 在所有标题下方，留出10像素的呼吸空间 */
+}
+
+h1 {
+    font-size: 2.5em;
+    /* 2.5em 约等于 16px * 2.5 = 40px */
+}
+
+h2 {
+    font-size: 1.8em;
+    /* 1.8em 约等于 16px * 1.8 = 28.8px */
+}
+
+h3 {
+    font-size: 1.2em;
+    /* 1.2em 约等于 16px * 1.2 = 19.2px */
+}
+
+p {
+    margin-bottom: 15px;
+    /* 段落与段落之间也需要呼吸空间 */
+}
